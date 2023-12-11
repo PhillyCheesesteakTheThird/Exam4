@@ -40,6 +40,6 @@ public class DiceGame {
             }
         }
         winningPlayer = playerList.get(0);
-        return winningPlayer.getName() + " won the game";
+        return winningPlayer.getName() + " won the game!";
     }
 }
