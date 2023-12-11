@@ -27,18 +27,17 @@ public class DiceGame {
     }
     public static String decideWinner(ArrayList<Player> playerList) {
         int size = playerList.size();
+        Player winningPlayer;
         for (int i = 0; i < size - 1; i++) {
             if (playerList.get(0).getDie().getValue() > playerList.get(1).getDie().getValue()) {
                 playerList.remove(1);
             } else if (playerList.get(0).getDie().getValue() == playerList.get(1).getDie().getValue()) {
                 return playerList.get(0).getName() + playerList.get(1).getName() + " tied the game.";
-                
             } else {
                 playerList.remove(0);
             }
         }
-        Player winningPlayer = playerList.get(0);
+        winningPlayer = playerList.get(0);
         return winningPlayer.getName() + " won the game";
-
     }
 }
