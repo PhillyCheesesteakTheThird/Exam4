@@ -11,8 +11,10 @@ public class DiceGame {
         System.out.println("Enter the number of players: ");
         int numPlayers = scanner.nextInt();
         for (int i = 0; i < numPlayers; i++) {
-            System.out.println("Enter the name for Player " + (i+1) + ":");
-            if (i == 0){scanner.nextLine();}
+            System.out.println("Enter the name for Player " + (i + 1) + ":");
+            if (i == 0) {
+                scanner.nextLine();
+            }
             String playerName = scanner.nextLine();
             playerList.add(new Player(playerName, new Die(numSides)));
         }
@@ -23,8 +25,8 @@ public class DiceGame {
         System.out.println(decideWinner(playerList));
 
 
-
     }
+
     public static String decideWinner(ArrayList<Player> playerList) {
         int size = playerList.size();
         Player winningPlayer;

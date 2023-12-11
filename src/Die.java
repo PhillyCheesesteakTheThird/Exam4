@@ -1,10 +1,11 @@
 import java.util.concurrent.ThreadLocalRandom;
+
 public class Die {
 
     private int numSides;
     private int value;
 
-    public Die(){
+    public Die() {
         this.numSides = 6;
         this.value = 1;
     }
